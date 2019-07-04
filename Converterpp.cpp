@@ -53,10 +53,24 @@ int lengthMenu()
     return choice;
 }
 
-int lengthConvert(lengthMenu)
-// recieves the unit of length and ask the user to enter the amount of the unit
+int lengthChoice(int type)
+// recieves the unit of length and ask the user to enter the amount of the unit.
 {
+    float amount; // the amount of the type to be converted from
+    string lengthtype;
+    if (type == 1)
+    lengthtype = "meters";
+    cout << "How many " << lengthtype << " would you like to convert?" << endl;
+    cin << amount;
+    cout << "\n" << amount << lengthtype << " is:" << endl;
+    toInches(amount);
 
     return 0;
+}
+
+float toInches()
+{
+    cout << "\n" << amount << lengthtype << " is:" << endl;
+
 }
 
