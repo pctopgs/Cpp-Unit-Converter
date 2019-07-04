@@ -41,9 +41,22 @@ int typeMenus(int choice)
 int lengthMenu()
 // Ask the user what unit he is converting from and displays a list of units of lengths
 {
+    int choice; 
     cout << "What unit of length are you converting from?" << endl;
     cout << "1. Meters" << endl;
     cout << "2. Inches" << endl;
     cout << "3. Miles" << endl;
     cout << "4. Kilometer" << endl;
+    cout << "0. Go back" << endl;
+
+    cin >> choice;
+    return choice;
 }
+
+int lengthConvert(lengthMenu)
+// recieves the unit of length and ask the user to enter the amount of the unit
+{
+
+    return 0;
+}
+
