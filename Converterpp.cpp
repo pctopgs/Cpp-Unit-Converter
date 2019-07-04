@@ -72,7 +72,14 @@ int lengthChoice(int type)
 
 float toInches(int baseType, float baseAmount)
 {
-    if 
+    float metersToInches,
+          milesToInches,
+          kilometersToInches
+    if (baseType == 1) // If the type we are converting from is meters...
+    {
+
+
+    }
 
 }
 
