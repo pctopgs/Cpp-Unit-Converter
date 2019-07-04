@@ -2,7 +2,7 @@
 
 Ask the user what kind of measurement he's dealing with and list out the types of measuremenats available in the program (examples: length, mass, tempurature)
 
-After the user selects a type of measurement, ask the user what unit he is converting from and list out the types of units available in the program (examples: if the user chooses 'length', the options will be millmeter, meter, feet, lightyear)
+After the user selects a type of measurement, ask the user what unit he is converting from and list out the types of units available in the program (examples: if the user chooses 'length', the options will be millmeter, meter, feet, lightyear). Assign the user choice to the 
 
 Once the user enters the unit of measurment he's convering from, ask the user to enter the amount
 

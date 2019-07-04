@@ -60,17 +60,19 @@ int lengthChoice(int type)
     string lengthtype;
     if (type == 1)
     lengthtype = "meters";
+    else if (type == 2)
+    lengthtype
     cout << "How many " << lengthtype << " would you like to convert?" << endl;
     cin << amount;
     cout << "\n" << amount << lengthtype << " is:" << endl;
-    toInches(amount);
+    toInches(type, amount);
 
     return 0;
 }
 
-float toInches()
+float toInches(int baseType, float baseAmount)
 {
-    cout << "\n" << amount << lengthtype << " is:" << endl;
+    if 
 
 }
 
