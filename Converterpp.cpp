@@ -14,6 +14,7 @@ int lengthChoice(int type);
 float toMeters(int, float);
 float toInches(int, float);
 float toMiles(int, float);
+float toKilometers(int, float);
 
 int main()
 {
@@ -81,6 +82,7 @@ int lengthChoice(int type)
     cout << toMeters(type, amount) << " in meters" << endl;
     cout << toInches(type, amount) << " in inches" << endl;
     cout << toMiles(type, amount) << " in miles" << endl;
+    cout << toKilometers(type, amount) << " in kilometers" << endl;
     /*
     cout << toMiles(type, amount) << " in miles" << endl;
     cout << toKilometers(type, amount) << " in kilometers" << endl;
@@ -178,21 +180,33 @@ float toMiles(int baseType, float baseAmount) // Done
     return inMiles;
 }
 
-float toKilometers(int baseType, float baseAmount)
+float toKilometers(int baseType, float baseAmount) // Done
 {
-    float metersToKilometers baseAmount * 0.001,
+    float metersToKilometers = baseAmount * 0.001,
           inchesToKilometers = baseAmount * .0000254,
           milesToKilometers = baseAmount * 1.609344,
           kilometersToKilometers = baseAmount,
           inKilometers;
     
     if (baseType == 1)
+    {
+        inKilometers = metersToKilometers;
+    }
 
     else if (baseType == 2)
+    {
+        inKilometers = inchesToKilometers;
+    }
 
     else if (baseType == 3)
+    {
+        inKilometers = milesToKilometers;
+    }
 
     else if (baseType == 4)
+    {
+        inKilometers = kilometersToKilometers;
+    }
 
-return inKilometers;
+    return inKilometers;
 }
