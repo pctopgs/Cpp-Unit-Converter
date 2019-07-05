@@ -11,7 +11,9 @@ int lengthChoice(int type);
 
 //int displayMenu();
 //int typeMenus(int);
+float toMeters(int, float);
 float toInches(int, float);
+float toMiles(int, float);
 
 int main()
 {
@@ -69,11 +71,16 @@ int lengthChoice(int type)
         lengthtype = "meters";
     else if (type == 2)
         lengthtype = "inches";
+    else if (type == 3)
+        lengthtype = "miles";
+    else if (type == 4)
+        lengthtype = "kilometers";
     cout << "How many " << lengthtype << " would you like to convert?" << endl;
     cin >> amount;
     cout << "\n" << amount << " " << lengthtype << " is:" << endl;
     cout << toMeters(type, amount) << " in meters" << endl;
-    cout << toInches(type, amount) << " in inches" << endl;    
+    cout << toInches(type, amount) << " in inches" << endl;
+    cout << toMiles(type, amount) << " in miles" << endl;
     /*
     cout << toMiles(type, amount) << " in miles" << endl;
     cout << toKilometers(type, amount) << " in kilometers" << endl;
@@ -82,16 +89,35 @@ int lengthChoice(int type)
     return 0;
 }
 
-float toMeters(int baseType, float baseAmount)
+float toMeters(int baseType, float baseAmount) // Done
 {
-    float metersToMeters,
-          inchesToMeters,
-          milesToMeters,
-          kilometersToMeters,
+    float metersToMeters = baseAmount,
+          inchesToMeters = baseAmount * 0.0254,
+          milesToMeters = baseAmount * 1609.344,
+          kilometersToMeters = baseAmount * 1000,
           inMeters;
+
+    if (baseType == 1)
+    {
+        inMeters = metersToMeters;
+    }
+    else if(baseType == 2)
+    {
+        inMeters = inchesToMeters;
+    }
+    else if(baseType == 3)
+    {
+        inMeters = milesToMeters;
+    }
+    else if(baseType == 4)
+    {
+        inMeters = kilometersToMeters;
+    }
+
+    return inMeters;
 }
 
-float toInches(int baseType, float baseAmount)
+float toInches(int baseType, float baseAmount) // Done
 {
     float metersToInches = baseAmount * 39.37,
           milesToInches = baseAmount * 63360,
@@ -115,8 +141,58 @@ float toInches(int baseType, float baseAmount)
         cout << milesToInches << " inches" << endl;
     }
 
-    else if (baseType == 4)
+    else if (baseType == 4) // If the type we are converting from is kilometers...
     inInches = kilometersToInches;
 
     return inInches;
+}
+
+float toMiles(int baseType, float baseAmount) // Done
+{
+    float metersToMiles = baseAmount * .00062137,
+          inchesToMiles = baseAmount * .00001578,
+          milesToMiles = baseAmount,
+          kilometersToMiles = baseAmount * .62137119,
+          inMiles;
+
+    if (baseType == 1) // If the type we are converting from is meters...
+    {
+        inMiles = metersToMiles;
+    }
+
+    else if (baseType == 2) // If the type we are converting from is inches...
+    {
+        inMiles = inchesToMiles;
+    }
+
+    else if (baseType == 3) // If the type we are converting from is miles...
+    {
+        inMiles = milesToMiles;
+    }
+
+    else if (baseType == 4) // If the type we are converting from is kilometers...
+    {
+        inMiles = kilometersToMiles;
+    }
+
+    return inMiles;
+}
+
+float toKilometers(int baseType, float baseAmount)
+{
+    float metersToKilometers baseAmount * 0.001,
+          inchesToKilometers = baseAmount * .0000254,
+          milesToKilometers = baseAmount * 1.609344,
+          kilometersToKilometers = baseAmount,
+          inKilometers;
+    
+    if (baseType == 1)
+
+    else if (baseType == 2)
+
+    else if (baseType == 3)
+
+    else if (baseType == 4)
+
+return inKilometers;
 }
