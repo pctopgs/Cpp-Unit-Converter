@@ -50,12 +50,12 @@ int lengthMenu()
 {
     // Ask the user what unit he is converting from and displays a list of units of lengths
     int choice; 
-    cout << "What unit of length are you converting from?" << endl;
-    cout << "1. Meters" << endl;
-    cout << "2. Inches" << endl;
-    cout << "3. Miles" << endl;
-    cout << "4. Kilometers" << endl;
-    cout << "0. Go back" << endl;
+    cout << "\tWhat unit of length are you converting from?" << endl;
+    cout << "\t1. Meters" << endl;
+    cout << "\t2. Inches" << endl;
+    cout << "\t3. Miles" << endl;
+    cout << "\t4. Kilometers" << endl;
+    cout << "\t0. Go back" << endl;
 
     cout << endl << "You're choice: " ;
     cin >> choice;
@@ -76,13 +76,13 @@ int lengthChoice(int type)
         lengthtype = "miles";
     else if (type == 4)
         lengthtype = "kilometers";
-    cout << "How many " << lengthtype << " would you like to convert?" << endl;
+    cout << "\tHow many " << lengthtype << " would you like to convert?" << endl;
     cin >> amount;
-    cout << "\n" << amount << " " << lengthtype << " is:" << endl;
-    cout << toMeters(type, amount) << " in meters" << endl;
-    cout << toInches(type, amount) << " in inches" << endl;
-    cout << toMiles(type, amount) << " in miles" << endl;
-    cout << toKilometers(type, amount) << " in kilometers" << endl;
+    cout << "\n\t" << amount << " " << lengthtype << " is:" << endl;
+    cout << "\t" << toMeters(type, amount) << " in meters" << endl;
+    cout << "\t" << toInches(type, amount) << " in inches" << endl;
+    cout << "\t" << toMiles(type, amount) << " in miles" << endl;
+    cout << "\t" << toKilometers(type, amount) << " in kilometers" << endl;
     /*
     cout << toMiles(type, amount) << " in miles" << endl;
     cout << toKilometers(type, amount) << " in kilometers" << endl;
