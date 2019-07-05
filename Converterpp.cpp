@@ -9,8 +9,10 @@ using namespace std;
 int lengthMenu();
 int lengthChoice(int type);
 
-//int displayMenu();
-//int typeMenus(int);
+int massMenu();
+
+int displayMenu();
+int typeMenus(int);
 float toMeters(int, float);
 float toInches(int, float);
 float toMiles(int, float);
@@ -18,22 +20,24 @@ float toKilometers(int, float);
 
 int main()
 {
-    // menuChoice = displayMenu();
-    lengthChoice(lengthMenu());
+    int menuChoice;
+    menuChoice = displayMenu();
+    typeMenus(menuChoice);
+    //lengthChoice(lengthMenu());
     //cout << "You chose " << menuChoice << endl;
     //typeMenus(menuChoice);
 
     return 0;
 }
-/*
+
 int displayMenu()
 //Displays the main menu and ask the user to make a choice. Returns the value that was chosen
 {
     int choice = 0;
-    cout << "\t\t*~*Main Menu*~*" << endl;
+    cout << "\t\t\n*~*Main Menu*~*" << endl;
     cout << "\t1. Length" << endl;
-    cout << "\t2. Weight" << endl;
-    cout << "\t3. Mass" << endl;
+    cout << "\t2. Mass" << endl;
+    cout << "\t3. Tempurature" << endl;
     cout << "Make a choice: " << endl;
     cin >> choice;
     return choice;
@@ -42,10 +46,26 @@ int displayMenu()
 int typeMenus(int choice)
 // This function will take the result from displayMenu() and branch off into the menus of different types of measurements
 {
-    if choice = 
+    if (choice == 1)
+    {
+        lengthChoice(lengthMenu());
+    }
+    else if(choice == 2)
+    {
+        massChoice(massMenu());
+    }
+    else if(choice == 3)
+    {
+        tempChoice(tempMenu());
+    }
+
+    else if(choice == 0)
+    {
+        cout << "\nGoodbye";
+    }
+
     return 0;
 }
-*/
 int lengthMenu()
 {
     // Ask the user what unit he is converting from and displays a list of units of lengths
@@ -57,7 +77,7 @@ int lengthMenu()
     cout << "\t4. Kilometers" << endl;
     cout << "\t0. Go back" << endl;
 
-    cout << endl << "You're choice: " ;
+    cout << endl << "\tYou're choice: " ;
     cin >> choice;
 
     return choice;
